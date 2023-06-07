@@ -1,23 +1,3 @@
-// import 'dart:ui';
-//
-// import 'package:final_project/extensions/color.dart';
-// import 'package:flutter/material.dart';
-//
-// class OrderWidget extends StatefulWidget {
-//   const OrderWidget({super.key});
-//
-//   @override
-//   State<OrderWidget> createState() => _OrderWidgetState();
-// }
-//
-// class _OrderWidgetState extends State<OrderWidget> {
-//   @override
-//   Widget build(BuildContext context) {
-//     return Placeholder();
-//   }
-// }
-
-
 import 'package:final_project/extensions/color.dart';
 import 'package:final_project/items/orderItem.dart';
 import 'package:flutter/material.dart';
