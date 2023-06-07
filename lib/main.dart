@@ -1,3 +1,4 @@
+import 'package:final_project/screens/HomeScreen.dart';
 import 'package:final_project/screens/OnboardingScreen.dart';
 import 'package:final_project/screens/LoginScreen.dart';
 import 'package:final_project/screens/SplashScreen.dart';
@@ -23,6 +24,7 @@ class MyApp extends StatelessWidget {
         '/': (context) => SplashScreen(),
         '/onboarding': (context) => OnboardingScreen(),
         '/login': (context) => LoginScreen(),
+        '/home': (context) => HomeScreen(),
       },
     );
   }

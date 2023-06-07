@@ -297,7 +297,9 @@ class _LoginScreenState extends State<LoginScreen> {
                                     borderRadius: BorderRadius.circular(5),
                                   ),
                                   child: ElevatedButton(
-                                    onPressed: () {},
+                                    onPressed: () {
+                                      Navigator.pushNamed(context, '/home');
+                                    },
                                     child: Text(
                                       'LOGIN',
                                       style: TextStyle(
