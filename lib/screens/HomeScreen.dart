@@ -2,6 +2,7 @@ import 'package:final_project/extensions/color.dart';
 import 'package:final_project/widgets/homeWidget.dart';
 import 'package:final_project/widgets/moreWidget.dart';
 import 'package:final_project/widgets/orderWidget.dart';
+import 'package:final_project/widgets/profileWidget.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -17,6 +18,7 @@ class _HomeScreenState extends State<HomeScreen> {
   final List<Widget> _screens = [
     HomeWidget(),
     OrderWidget(),
+    ProfileWidget(),
     MoreWidget(),
   ];
 
