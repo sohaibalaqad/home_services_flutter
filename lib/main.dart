@@ -1,6 +1,9 @@
+import 'package:final_project/screens/DoneScreen.dart';
 import 'package:final_project/screens/HomeScreen.dart';
+import 'package:final_project/screens/LocationScreen.dart';
 import 'package:final_project/screens/OnboardingScreen.dart';
 import 'package:final_project/screens/LoginScreen.dart';
+import 'package:final_project/screens/RequestServicesSecreen.dart';
 import 'package:final_project/screens/SplashScreen.dart';
 import 'package:flutter/material.dart';
 
@@ -17,14 +20,14 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Final Project',
-      theme: ThemeData(
-        primarySwatch: Colors.green,
-      ),
       routes: {
         '/': (context) => SplashScreen(),
         '/onboarding': (context) => OnboardingScreen(),
         '/login': (context) => LoginScreen(),
         '/home': (context) => HomeScreen(),
+        '/RequestServices': (context) => RequestServicesSecreen(),
+        '/location': (context) => LocationScreen(),
+        '/done': (context) => DoneScreen(),
       },
     );
   }

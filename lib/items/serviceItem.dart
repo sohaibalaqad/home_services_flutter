@@ -13,31 +13,39 @@ class ServiceItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Card(
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(10),
-        side: BorderSide(color: Color(0xFFDE1487), width: 1),
-      ),
-      color: Colors.white,
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Image.asset(
-            image,
-            width: 50,
-            height: 50,
-          ),
-          SizedBox(height: 10),
-          Text(
-            title,
-            style: TextStyle(
-              fontSize: 10,
-              fontFamily: 'Cairo',
-              color: '#0E4DFB'.toColor(),
+    return InkWell(
+      onTap: () {
+        Navigator.pushNamed(context, '/RequestServices');
+      },
+      child: Card(
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(10),
+          side: BorderSide(color: Color(0xFFDE1487), width: 1),
+        ),
+        color: Colors.white,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Image.asset(
+              image,
+              width: 50,
+              height: 50,
             ),
-          ),
-        ],
+            SizedBox(height: 10),
+            Text(
+              title,
+              style: TextStyle(
+                fontSize: 10,
+                fontFamily: 'Cairo',
+                color: '#0E4DFB'.toColor(),
+              ),
+            ),
+          ],
+        ),
       ),
     );
+
+
+
   }
 }

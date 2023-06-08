@@ -1,4 +1,3 @@
-import 'package:final_project/extensions/color.dart';
 import 'package:final_project/widgets/homeWidget.dart';
 import 'package:final_project/widgets/moreWidget.dart';
 import 'package:final_project/widgets/orderWidget.dart';
