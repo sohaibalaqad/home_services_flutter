@@ -1,8 +1,10 @@
+import 'dart:convert';
 import 'dart:ui';
 
 import 'package:final_project/extensions/color.dart';
 import 'package:final_project/items/serviceItem.dart';
 import 'package:flutter/material.dart';
+import 'package:http/http.dart' as http;
 
 class HomeWidget extends StatefulWidget {
   const HomeWidget({super.key});
@@ -12,6 +14,72 @@ class HomeWidget extends StatefulWidget {
 }
 
 class _HomeWidgetState extends State<HomeWidget> {
+
+
+
+
+  // ---------------------------------------------------------------------
+
+  List<ServiceItem> serviceItems = []; // List to store service items
+
+  @override
+  void initState() {
+    super.initState();
+    fetchData(); // Call the method to fetch data from the API
+  }
+
+
+  Future<void> fetchData() async {
+    var headers = {
+      'Accept': 'application/json'
+    };
+
+    var request = http.Request(
+      'GET',
+      Uri.parse('https://studentucas.awamr.com/api/all/works'),
+    );
+
+    request.headers.addAll(headers);
+
+    http.StreamedResponse response = await request.send();
+
+    if (response.statusCode == 200) {
+      String responseBody = await response.stream.bytesToString();
+      final dynamic jsonData = json.decode(responseBody);
+
+      if (jsonData is Map && jsonData.containsKey('data')) {
+        final List<dynamic> data = jsonData['data'];
+
+        final List<ServiceItem> items = [];
+
+        for (var itemData in data) {
+          final serviceItem = ServiceItem(
+            image: itemData['icon'],
+            title: itemData['name'],
+          );
+          items.add(serviceItem);
+        }
+
+        setState(() {
+          serviceItems = items;
+        });
+      } else {
+        print('Invalid data format');
+      }
+    } else {
+      print(response.reasonPhrase);
+    }
+  }
+
+
+  // ---------------------------------------------------------------------
+
+
+
+
+
+
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -88,19 +156,10 @@ class _HomeWidgetState extends State<HomeWidget> {
                     crossAxisSpacing: 10,
                     mainAxisSpacing: 10,
                     padding: EdgeInsets.all(10),
-                    children: [
-                      ServiceItem(image: 'images/Shape 1.png', title: 'Carpenter'),
-                      ServiceItem(image: 'images/Shape 2.png', title: 'Carpenter'),
-                      ServiceItem(image: 'images/Shape 3.png', title: 'Carpenter'),
-                      ServiceItem(image: 'images/Shape 4.png', title: 'Carpenter'),
-                      ServiceItem(image: 'images/Shape 5.png', title: 'Carpenter'),
-                      ServiceItem(image: 'images/Shape 6.png', title: 'Carpenter'),
-                      ServiceItem(image: 'images/Shape 7.png', title: 'Carpenter'),
-                      ServiceItem(image: 'images/Shape 3.png', title: 'Carpenter'),
-                      ServiceItem(image: 'images/Shape 1.png', title: 'Carpenter'),
-                      ServiceItem(image: 'images/Shape 6.png', title: 'Carpenter'),
-                      ServiceItem(image: 'images/Shape 4.png', title: 'Carpenter'),
-                    ],
+                    children: serviceItems.map((item) {
+                      return ServiceItem(image: item.image, title: item.title);
+                    }).toList(),
+
                   ),
                 ),
               ],
