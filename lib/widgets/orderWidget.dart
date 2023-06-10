@@ -1,6 +1,7 @@
 import 'package:final_project/extensions/color.dart';
 import 'package:final_project/items/orderItem.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app-localization.dart';
 
 class OrderWidget extends StatefulWidget {
   const OrderWidget({Key? key}) : super(key: key);
@@ -35,7 +36,7 @@ class _OrderWidgetState extends State<OrderWidget> with SingleTickerProviderStat
           width: double.infinity,
           child: Center(
             child: Text(
-              'Item Details',
+              AppLocalizations.of(context)?.orders_details ??'Orders Details',
               style: TextStyle(
                 fontSize: 18,
                 color: Colors.white,
@@ -51,9 +52,9 @@ class _OrderWidgetState extends State<OrderWidget> with SingleTickerProviderStat
           indicatorColor: "#0E4DFB".toColor(),
           unselectedLabelColor: Colors.grey,
           tabs: [
-            Tab(text: 'Pending'),
-            Tab(text: 'Underway'),
-            Tab(text: 'Completed'),
+            Tab(text: AppLocalizations.of(context)?.pending ??  'Pending'),
+            Tab(text: AppLocalizations.of(context)?.underway ??  'Underway'),
+            Tab(text: AppLocalizations.of(context)?.completed ??  'Completed'),
           ],
         ),
         Expanded(

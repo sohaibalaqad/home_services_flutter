@@ -3,6 +3,7 @@ import 'dart:ui';
 import 'package:country_code_picker/country_code_picker.dart';
 import 'package:final_project/extensions/color.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app-localization.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -79,7 +80,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                   });
                                 },
                                 child: Text(
-                                  "Service provider",
+                                  AppLocalizations.of(context)?.service_provider ?? "Service provider",
                                   style: TextStyle(
                                     color: _isActive
                                         ? "#5927FF".toColor()
@@ -101,7 +102,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                   });
                                 },
                                 child: Text(
-                                  "Customer",
+                                  AppLocalizations.of(context)?.customer ?? "Customer",
                                   style: TextStyle(
                                     color: _isActive
                                         ? "#646781".toColor()
@@ -118,11 +119,11 @@ class _LoginScreenState extends State<LoginScreen> {
                           ],
                         ),
                         Padding(
-                          padding: const EdgeInsets.only(top: 23),
+                          padding: const EdgeInsets.only(top: 20),
                           child: TextField(
                             keyboardType: TextInputType.phone,
                             decoration: InputDecoration(
-                              hintText: 'Phone Number',
+                              hintText: AppLocalizations.of(context)?.phone_number ?? "Phone Number",
                               prefixIcon: CountryCodePicker(
                                 initialSelection: 'PS',
                                 favorite: ['+970', 'PS'],
@@ -153,13 +154,13 @@ class _LoginScreenState extends State<LoginScreen> {
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsets.only(top: 18),
+                          padding: const EdgeInsets.only(top: 16),
                           child: TextField(
                             controller: _passwordController,
                             obscureText: !_showPassword,
                             obscuringCharacter: '*',
                             decoration: InputDecoration(
-                              hintText: 'Password',
+                              hintText: AppLocalizations.of(context)?.password ?? "Password",
                               border: OutlineInputBorder(),
                               focusedBorder: OutlineInputBorder(
                                 borderSide: BorderSide(
@@ -186,7 +187,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsets.only(top: 40),
+                          padding: const EdgeInsets.only(top: 30),
                           child: Row(
                             crossAxisAlignment: CrossAxisAlignment.center,
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -221,7 +222,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                     width: 10,
                                   ),
                                   Text(
-                                    "Remember Me",
+                                    AppLocalizations.of(context)?.remember_me ??"Remember Me",
                                     style: TextStyle(
                                       fontSize: 12,
                                       fontWeight: FontWeight.bold,
@@ -234,7 +235,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                   // Forgot Password Logic
                                 },
                                 child: Text(
-                                  "Forgot Password?",
+                                  AppLocalizations.of(context)?.forgot_password  ?? "Forgot Password?",
                                   style: TextStyle(
                                     color: Colors.black,
                                     fontSize: 15,
@@ -255,7 +256,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Text(
-                                    "New Member?",
+                                    AppLocalizations.of(context)?.new_member ?? "New Member?",
                                     style: TextStyle(
                                       fontSize: 16,
                                       fontFamily: "Nunito Sans",
@@ -270,7 +271,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                     ),
                                     onPressed: () {},
                                     child: Text(
-                                      'SIGN UP',
+                                      AppLocalizations.of(context)?.signup ?? 'SIGN UP',
                                       style: TextStyle(
                                         fontSize: 18,
                                         fontFamily: "Nunito Sans",
@@ -301,7 +302,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                       Navigator.pushNamed(context, '/home');
                                     },
                                     child: Text(
-                                      'LOGIN',
+                                      AppLocalizations.of(context)?.login ?? "LOGIN",
                                       style: TextStyle(
                                         color: Colors.white,
                                         fontSize: 18,
@@ -336,7 +337,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                 mainAxisSize: MainAxisSize.min,
                                 children: [
                                   Text(
-                                    'Get Start Now',
+                                    AppLocalizations.of(context)?.get_start_now ?? 'Get Start Now',
                                     style: TextStyle(
                                       fontSize: 16,
                                       fontFamily: "Nunito Sans",

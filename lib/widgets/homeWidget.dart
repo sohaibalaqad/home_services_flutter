@@ -5,6 +5,7 @@ import 'package:final_project/extensions/color.dart';
 import 'package:final_project/items/serviceItem.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
+import 'package:flutter_gen/gen_l10n/app-localization.dart';
 
 class HomeWidget extends StatefulWidget {
   const HomeWidget({super.key});
@@ -142,7 +143,7 @@ class _HomeWidgetState extends State<HomeWidget> {
             child: Column(
               children: [
                 Text(
-                  'Select Service',
+                  AppLocalizations.of(context)?.select_service ?? 'Select Service',
                   style: TextStyle(
                     color: '#0E4DFB'.toColor(),
                     fontFamily: 'Poppins',

@@ -1,6 +1,8 @@
 import 'package:final_project/extensions/color.dart';
+import 'package:final_project/main.dart';
 import 'package:flutter/material.dart';
 import 'package:final_project/components/tapBarClipComponent.dart';
+import 'package:flutter_gen/gen_l10n/app-localization.dart';
 
 class MoreWidget extends StatefulWidget {
   const MoreWidget({super.key});
@@ -19,6 +21,15 @@ class _MoreWidgetState extends State<MoreWidget> {
     "Rate App",
     "Delete Account",
   ];
+  final List<String> moreList_ar = [
+    "تغيير كلمة المرور",
+    "FAQ's",
+    "حول التطبيق",
+    "الشروط والأحكام",
+    "سياسة الخصوصية",
+    "تقييم التطبيق",
+    "حذف الحساب",
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +37,7 @@ class _MoreWidgetState extends State<MoreWidget> {
       children: [
         Expanded(
           flex: 1,
-            child: TapBarClip(title: 'More'),
+            child: TapBarClip(title: AppLocalizations.of(context)?.more ?? 'More'),
         ),
         Expanded(
           flex: 4,
@@ -35,7 +46,7 @@ class _MoreWidgetState extends State<MoreWidget> {
               itemBuilder: (BuildContext context, int index) {
                 return ListTile(
                   title: Text(
-                      moreList[index],
+                      MyApp.getLocale(context).languageCode == 'en' ? moreList[index] : moreList_ar[index],
                       style: TextStyle(
                         fontSize: 15,
                         fontFamily: 'Nunito Sans',

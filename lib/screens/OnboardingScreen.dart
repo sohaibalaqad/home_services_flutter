@@ -1,5 +1,6 @@
 import 'package:final_project/extensions/color.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app-localization.dart';
 
 class OnboardingScreen extends StatelessWidget {
   final PageController _pageController = PageController();
@@ -12,15 +13,15 @@ class OnboardingScreen extends StatelessWidget {
         children: [
           _buildPage(
             'images/illustration-1.png',
-            'Fast reservation with technicians and craftsmen',
+            AppLocalizations.of(context)?.onboarding_title ?? 'Fast reservation with technicians and craftsmen',
           ),
           _buildPage(
             'images/illustration-2.png',
-            'Fast reservation with technicians and craftsmen',
+            AppLocalizations.of(context)?.onboarding_title ?? 'Fast reservation with technicians and craftsmen',
           ),
           _buildPage(
             'images/illustration-3.png',
-            'Fast reservation with technicians and craftsmen',
+            AppLocalizations.of(context)?.onboarding_title  ?? 'Fast reservation with technicians and craftsmen',
           ),
         ],
       ),
@@ -86,7 +87,7 @@ class OnboardingScreen extends StatelessWidget {
             }
           },
           child: Text(
-            'Next',
+            AppLocalizations.of(context)?.next ?? 'Next',
             style: TextStyle(
               color: Colors.white,
               fontSize: 18,

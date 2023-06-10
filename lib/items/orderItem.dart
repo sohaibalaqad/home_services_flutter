@@ -1,6 +1,7 @@
 import 'package:final_project/extensions/color.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app-localization.dart';
 
 class OrderItem extends StatelessWidget {
   @override
@@ -24,7 +25,7 @@ class OrderItem extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Text(
-                            'Order #52001',
+                            AppLocalizations.of(context)?.order_num ?? 'Order #52001',
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
                               fontFamily: 'Nunito Sans',
@@ -45,7 +46,7 @@ class OrderItem extends StatelessWidget {
                       Row(
                         children: [
                           Text(
-                            'Service Type: ',
+                            AppLocalizations.of(context)?.service_type ?? 'Service Type: ',
                             style: TextStyle(
                               color: '#7F8FA6'.toColor(),
                               fontWeight: FontWeight.w400,
@@ -54,7 +55,7 @@ class OrderItem extends StatelessWidget {
                             ),
                           ),
                           Text(
-                            'Carpenter',
+                            AppLocalizations.of(context)?.carpenter ?? 'Carpenter',
                             style: TextStyle(
                               color: '#0E4DFB'.toColor(),
                               fontWeight: FontWeight.w400,
@@ -83,7 +84,7 @@ class OrderItem extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Text(
-                            'Order #52001',
+                            AppLocalizations.of(context)?.order_num ?? 'Order #52001',
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
                               fontFamily: 'Nunito Sans',
@@ -104,7 +105,7 @@ class OrderItem extends StatelessWidget {
                       Row(
                         children: [
                           Text(
-                            'Service Type: ',
+                            AppLocalizations.of(context)?.service_type ?? 'Service Type: ',
                             style: TextStyle(
                               color: '#7F8FA6'.toColor(),
                               fontWeight: FontWeight.w400,
@@ -113,7 +114,7 @@ class OrderItem extends StatelessWidget {
                             ),
                           ),
                           Text(
-                            'Carpenter',
+                            AppLocalizations.of(context)?.carpenter ?? 'Carpenter',
                             style: TextStyle(
                               color: '#0E4DFB'.toColor(),
                               fontWeight: FontWeight.w400,
@@ -142,7 +143,7 @@ class OrderItem extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Text(
-                            'Order #52001',
+                            AppLocalizations.of(context)?.order_num ?? 'Order #52001',
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
                               fontFamily: 'Nunito Sans',
@@ -163,7 +164,7 @@ class OrderItem extends StatelessWidget {
                       Row(
                         children: [
                           Text(
-                            'Service Type: ',
+                            AppLocalizations.of(context)?.service_type ?? 'Service Type: ',
                             style: TextStyle(
                               color: '#7F8FA6'.toColor(),
                               fontWeight: FontWeight.w400,
@@ -172,7 +173,7 @@ class OrderItem extends StatelessWidget {
                             ),
                           ),
                           Text(
-                            'Carpenter',
+                            AppLocalizations.of(context)?.carpenter ?? 'Carpenter',
                             style: TextStyle(
                               color: '#0E4DFB'.toColor(),
                               fontWeight: FontWeight.w400,
@@ -201,7 +202,7 @@ class OrderItem extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Text(
-                            'Order #52001',
+                            AppLocalizations.of(context)?.order_num ?? 'Order #52001',
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
                               fontFamily: 'Nunito Sans',
@@ -222,7 +223,7 @@ class OrderItem extends StatelessWidget {
                       Row(
                         children: [
                           Text(
-                            'Service Type: ',
+                            AppLocalizations.of(context)?.service_type ?? 'Service Type: ',
                             style: TextStyle(
                               color: '#7F8FA6'.toColor(),
                               fontWeight: FontWeight.w400,
@@ -231,7 +232,7 @@ class OrderItem extends StatelessWidget {
                             ),
                           ),
                           Text(
-                            'Carpenter',
+                            AppLocalizations.of(context)?.carpenter ?? 'Carpenter',
                             style: TextStyle(
                               color: '#0E4DFB'.toColor(),
                               fontWeight: FontWeight.w400,
@@ -260,7 +261,7 @@ class OrderItem extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Text(
-                            'Order #52001',
+                            AppLocalizations.of(context)?.order_num ?? 'Order #52001',
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
                               fontFamily: 'Nunito Sans',
@@ -281,7 +282,7 @@ class OrderItem extends StatelessWidget {
                       Row(
                         children: [
                           Text(
-                            'Service Type: ',
+                            AppLocalizations.of(context)?.service_type ?? 'Service Type: ',
                             style: TextStyle(
                               color: '#7F8FA6'.toColor(),
                               fontWeight: FontWeight.w400,
@@ -290,7 +291,7 @@ class OrderItem extends StatelessWidget {
                             ),
                           ),
                           Text(
-                            'Carpenter',
+                            AppLocalizations.of(context)?.carpenter ?? 'Carpenter',
                             style: TextStyle(
                               color: '#0E4DFB'.toColor(),
                               fontWeight: FontWeight.w400,
@@ -319,7 +320,7 @@ class OrderItem extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Text(
-                            'Order #52001',
+                            AppLocalizations.of(context)?.order_num ?? 'Order #52001',
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
                               fontFamily: 'Nunito Sans',
@@ -340,7 +341,7 @@ class OrderItem extends StatelessWidget {
                       Row(
                         children: [
                           Text(
-                            'Service Type: ',
+                            AppLocalizations.of(context)?.service_type ?? 'Service Type: ',
                             style: TextStyle(
                               color: '#7F8FA6'.toColor(),
                               fontWeight: FontWeight.w400,
@@ -349,7 +350,7 @@ class OrderItem extends StatelessWidget {
                             ),
                           ),
                           Text(
-                            'Carpenter',
+                            AppLocalizations.of(context)?.carpenter ?? 'Carpenter',
                             style: TextStyle(
                               color: '#0E4DFB'.toColor(),
                               fontWeight: FontWeight.w400,
@@ -378,7 +379,7 @@ class OrderItem extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Text(
-                            'Order #52001',
+                            AppLocalizations.of(context)?.order_num ?? 'Order #52001',
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
                               fontFamily: 'Nunito Sans',
@@ -399,7 +400,7 @@ class OrderItem extends StatelessWidget {
                       Row(
                         children: [
                           Text(
-                            'Service Type: ',
+                            AppLocalizations.of(context)?.service_type ?? 'Service Type: ',
                             style: TextStyle(
                               color: '#7F8FA6'.toColor(),
                               fontWeight: FontWeight.w400,
@@ -408,7 +409,7 @@ class OrderItem extends StatelessWidget {
                             ),
                           ),
                           Text(
-                            'Carpenter',
+                            AppLocalizations.of(context)?.carpenter ?? 'Carpenter',
                             style: TextStyle(
                               color: '#0E4DFB'.toColor(),
                               fontWeight: FontWeight.w400,

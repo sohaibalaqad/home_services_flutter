@@ -3,6 +3,7 @@ import 'package:final_project/widgets/moreWidget.dart';
 import 'package:final_project/widgets/orderWidget.dart';
 import 'package:final_project/widgets/profileWidget.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app-localization.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -50,7 +51,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   width: 24,
                   height: 24,
                 ),
-                label: "Service",
+                label: AppLocalizations.of(context)?.service ?? "Service",
               ),
               BottomNavigationBarItem(
                 icon: Image.asset(
@@ -58,7 +59,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   width: 24,
                   height: 24,
                 ),
-                label: "Orders",
+                label: AppLocalizations.of(context)?.orders ?? "Orders",
               ),
               BottomNavigationBarItem(
                 icon: Image.asset(
@@ -66,11 +67,11 @@ class _HomeScreenState extends State<HomeScreen> {
                   width: 24,
                   height: 24,
                 ),
-                label: "User",
+                label: AppLocalizations.of(context)?.user ?? "User",
               ),
               BottomNavigationBarItem(
                 icon: Icon(Icons.more_horiz),
-                label: "More",
+                label: AppLocalizations.of(context)?.more ?? "More",
               ),
             ],
           ),
